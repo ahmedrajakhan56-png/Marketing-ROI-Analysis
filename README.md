@@ -1,5 +1,5 @@
 # 📊 Marketing ROI Analysis
-### *Google-Style Data Analytics Project: Python • AWS • Power BI • Auto ML*
+ Data Analytics Project: Python • AWS • Power BI • Auto ML*
 
 <div align="center">
   
