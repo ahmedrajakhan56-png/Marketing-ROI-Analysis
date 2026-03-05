@@ -1,5 +1,5 @@
  Marketing ROI Analysis
- Python • AWS • Power BI • Auto ML
+ Data Analytics Project: Python • AWS • Power BI • Auto ML
 
 <div align="center">
   
@@ -102,6 +102,11 @@
 ---
 
 ## 🐍 Python - *Data Cleaning & Preparation*
+
+<details>
+<summary><b>📂 Click to expand - Python ETL Code (Data Cleaning, Feature Engineering)</b></summary>
+
+<br>
 
 ```python
 """
@@ -239,9 +244,16 @@ print(f"Best Channel: {channel_summary['roi'].idxmax()} ({channel_summary['roi']
 print("="*50)
 ```
 
+</details>
+
 ---
 
 ## 🗄️ SQL Server - *Structured Analysis*
+
+<details>
+<summary><b>📂 Click to expand - SQL Server Queries (Database, Analysis, Stored Procs)</b></summary>
+
+<br>
 
 ```sql
 /*
@@ -470,9 +482,16 @@ FROM MarketingCampaigns
 WHERE ROI < 0;
 ```
 
+</details>
+
 ---
 
 ## ☁️ AWS - *Scalable Cloud Analytics*
+
+<details>
+<summary><b>📂 Click to expand - AWS Setup (S3, Athena, Serverless Queries)</b></summary>
+
+<br>
 
 ```python
 """
@@ -586,7 +605,7 @@ print("✅ Athena database created")
 # ============================================
 print("\n📊 Creating external table for marketing data...")
 
-create_table_query = """
+create_table_query = f"""
 CREATE EXTERNAL TABLE IF NOT EXISTS marketing_campaigns (
     campaign_id INT,
     campaign_name STRING,
@@ -718,6 +737,8 @@ print("🔍 Query directly with Athena - no servers to manage!")
 print("📈 Power BI can connect directly to Athena for live dashboards")
 ```
 
+</details>
+
 ---
 
 ## 📊 Power BI - *Interactive Dashboards with Built-in ML*
@@ -730,7 +751,10 @@ print("📈 Power BI can connect directly to Athena for live dashboards")
 
 <br>
 
-### 📊 **Power BI Auto ML - No Separate ML Needed!**
+<details>
+<summary><b>📂 Click to expand - Power BI DAX Measures & Auto ML Insights</b></summary>
+
+<br>
 
 ```dax
 /*
@@ -769,124 +793,52 @@ DIVIDE(
     SUM('MarketingData'[impressions]),
     0
 ) * 100
+```
 
+### 🔮 **Power BI Auto ML - Key Influencers Results**
+
+```
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║   POWER BI AUTO ML - AUTOMATICALLY GENERATED INSIGHTS            ║
+║   (No separate Python/ML required - Built into Power BI)         ║
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║   🔍 WHAT INCREASES ROI THE MOST?                                 ║
+║   ─────────────────────────────────────────────────────────────   ║
+║                                                                   ║
+║   1. Channel = Email Marketing          🔼 +235% ROI             ║
+║   2. Target Audience = Existing Customers 🔼 +198% ROI           ║
+║   3. Campaign Type = Retention           🔼 +156% ROI             ║
+║   4. Spend Range = $5K-$10K              🔼 +89% ROI              ║
+║   5. Season = Q4 (Holiday)               🔼 +67% ROI              ║
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║   ⚠️ WHAT DECREASES ROI THE MOST?                                 ║
+║   ─────────────────────────────────────────────────────────────   ║
+║                                                                   ║
+║   1. Channel = Display Ads               🔽 -145% ROI             ║
+║   2. Target Audience = Cold Leads        🔽 -112% ROI             ║
+║   3. Campaign Type = Awareness            🔽 -78% ROI              ║
+║   4. Spend > $25K                         🔽 -65% ROI              ║
+║   5. Season = Q1 (Post-holiday)           🔽 -42% ROI              ║
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║   🏆 TOP PERFORMING SEGMENTS                                      ║
+║   ─────────────────────────────────────────────────────────────   ║
+║                                                                   ║
+║   🥇 Email + Existing Customers + Retention    = 520% ROI        ║
+║   🥈 Search + High Intent + Q4                  = 380% ROI        ║
+║   🥉 Instagram + Millennials + Product Launch   = 295% ROI        ║
+║   4. Facebook + Retargeting + Summer            = 210% ROI        ║
+║   5. YouTube + Tutorial + Q3                     = 185% ROI        ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+```
+
+```dax
 -- ============================================
-# 🔮 POWER BI AUTO ML - Key Influencers Visual
-# ============================================
-/*
-THIS IS THE MAGIC - BUILT INTO POWER BI!
-No Python, no separate ML model.
-Just drag and drop in Power BI:
-
-1. Add "Key Influencers" visual
-2. Set "ROI" as the metric to analyze
-3. Add fields: channel, campaign_type, target_audience, spend, season
-4. Power BI automatically runs ML and shows:
-   - What increases ROI?
-   - What decreases ROI?
-   - Segments with highest/lowest ROI
-*/
-
--- These are NOT DAX - they're what Power BI ML shows automatically:
-
-/*
-🔍 KEY INFLUENCERS RESULTS (from Power BI Auto ML):
-
-What increases ROI the most?
-------------------------------------------------
-1. Channel = Email Marketing    (+235% ROI)
-2. Target Audience = Existing Customers  (+198% ROI)
-3. Campaign Type = Retention    (+156% ROI)
-4. Spend Range = $5K-$10K       (+89% ROI)
-5. Season = Q4 (Holiday)        (+67% ROI)
-
-What decreases ROI the most?
-------------------------------------------------
-1. Channel = Display Ads         (-145% ROI)
-2. Target Audience = Cold Leads  (-112% ROI)
-3. Campaign Type = Awareness     (-78% ROI)
-4. Spend > $25K                  (-65% ROI)
-5. Season = Q1 (Post-holiday)    (-42% ROI)
-
-Top Segments by ROI:
-------------------------------------------------
-🏆 Email + Existing Customers + Retention = 520% ROI
-🥈 Search + High Intent + Q4 = 380% ROI
-🥉 Instagram + Millennials + Product Launch = 295% ROI
-*/
-
--- ============================================
--- DYNAMIC SEGMENTATION (What-If Analysis)
--- ============================================
-
--- Create a What-If parameter in Power BI
--- Then use it for dynamic calculations:
-
-ROI with Budget Change = 
-VAR CurrentROI = [Overall ROI]
-VAR BudgetMultiplier = 'Budget Change'[Budget Change Value]
-RETURN
-CurrentROI * (1 + (BudgetMultiplier - 1) * 0.3)  -- 30% efficiency
-
--- ============================================
--- ADVANCED DAX MEASURES
--- ============================================
-
--- Rolling 3-month Average ROI
-ROI Rolling 3M = 
-CALCULATE(
-    AVERAGEX(
-        DATESINPERIOD('Date'[Date], LASTDATE('Date'[Date]), -3, MONTH),
-        [Overall ROI]
-    ),
-    ALL('MarketingData')
-)
-
--- Channel Contribution %
-Channel Contribution = 
-DIVIDE(
-    [Total Revenue],
-    CALCULATE([Total Revenue], ALL('MarketingData'[channel]))
-)
-
--- Efficiency Score (ROI per $1000 spend)
-Efficiency Score = 
-DIVIDE(
-    [Overall ROI],
-    [Total Spend] / 1000,
-    0
-)
-
--- ============================================
--- ML-ENHANCED MEASURES (Using Auto ML insights)
--- ============================================
-
-/*
-After running Key Influencers, Power BI creates
-automatic segments. Use them in other visuals:
-*/
-
--- ROI for High-Performance Segments
-High Performer ROI = 
-CALCULATE(
-    [Overall ROI],
-    'MarketingData'[channel] IN {"Email Marketing", "Google Search"},
-    'MarketingData'[target_audience] = "Existing Customers"
-)
-
--- Risk Alert (campaigns below threshold)
-Below Threshold Campaigns = 
-COUNTROWS(
-    FILTER(
-        'MarketingData',
-        'MarketingData'[roi] < 0
-    )
-)
-
--- ============================================
--- PREDICTIVE "WHAT-IF" (Manual version of Auto ML)
--- ============================================
-
-/*
-Power BI's "What-If" parameters let business users
-ask questions like "What if we shift
+-- DYNAMIC SEGMENT
