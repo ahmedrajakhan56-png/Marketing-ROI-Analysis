@@ -3,6 +3,12 @@ End-to-end marketing analytics project analyzing 7,500+ campaigns to optimize $5
 
  📊 Marketing ROI Dashboard - Power BI Project
 
+ ![Python](https://img.shields.io/badge/Python-3.8-blue)
+![Pandas](https://img.shields.io/badge/Pandas-1.3.5-green)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-2019-red)
+![AWS](https://img.shields.io/badge/AWS-S3%20%7C%20Glue%20%7C%20Athena-orange)
+
  📋 Project Overview
 A comprehensive 3-page interactive dashboard analyzing 7,500+ marketing campaigns to optimize ROI and reduce ad spend waste.
 
